@@ -1,0 +1,66 @@
+$desktop: 1100px;
+$tablets: 790px;
+$phone: 550px;
+
+@mixin desktop {
+    @media screen and (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media screen and (max-width: #{$tablets}) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media screen and (max-width: #{$phone}) {
+        @content;
+    }
+}
+
+// Desktop
+@include desktop {
+    // Nosotros
+    .about{
+        &__container{
+            .content{
+                order: 1;
+                flex:0 0 100% !important;
+                margin: 50px 0;
+            }
+
+            .container_image{
+                order:0;
+                flex:0 0 100% !important;
+                margin: 50px 0;
+            }
+        }
+    }
+
+    .icons{
+        width: 100%!important;
+    }
+}
+
+// TABLETS
+@include tablets {
+    .card{
+        width: 48%!important;
+    }
+}
+
+// Phone
+@include phone {
+    .card{
+        width: 100%!important;
+    }
+
+    // Footer{
+        .footer{
+            &__container{
+                grid-template-columns: 1fr !important;
+            }
+        }
+}

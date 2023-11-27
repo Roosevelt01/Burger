@@ -1,0 +1,22 @@
+// Generales
+@import 'fonts';
+@import 'variables';
+@import 'generales';
+@import 'reset';
+@import 'mixin.scss';
+@import 'mediaq';
+
+//Componentes
+@import '_componentes.scss';
+
+//Layout
+@import '_nav.scss';
+@import '_header.scss';
+@import '_about.scss';
+@import '_oferta.scss';
+@import 'menu';
+@import 'footer';
+
+
+
+
